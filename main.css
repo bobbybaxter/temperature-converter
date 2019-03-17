@@ -1,3 +1,18 @@
 body {
-  background-color: lightblue;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.tempApp {
+  display: flex;
+  height: 300px;
+  width: 500px;
+  flex-direction: column;
+  background-color: rgb(225, 225, 225);
+  align-items: center;
+  justify-content: center;
+}
+
+#tempInput {
 }
