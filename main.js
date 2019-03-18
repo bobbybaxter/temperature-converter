@@ -35,8 +35,16 @@ const determineConverter = () => {
   }
 };
 
+const clear = () => {
+  tempInput.value = '';
+  radioC.checked = false;
+  radioF.checked = false;
+  printToDom('tempOutput', '');
+}
+
 const init = () => {
   convertBtn.addEventListener('click', determineConverter);
-};
+  clearBtn.addEventListener('click', clear);
+}
 
 init();
