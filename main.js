@@ -51,6 +51,12 @@ const determineConverter = () => {
   }
 };
 
+const enterKeydown = (e) => {
+  if (e.keyCode === 13) {
+    determineConverter();
+  }
+}
+
 const clear = () => {
   tempInput.value = '';
   radioC.checked = false;
@@ -60,6 +66,7 @@ const clear = () => {
 
 const init = () => {
   convertBtn.addEventListener('click', determineConverter);
+  document.addEventListener('keypress', enterKeydown)
   clearBtn.addEventListener('click', clear);
 }
 
