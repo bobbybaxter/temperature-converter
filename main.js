@@ -1,8 +1,11 @@
+// Defintions
 const tempInput = document.getElementById('tempInput');
 const convertBtn = document.getElementById('convertBtn');
+const clearBtn = document.getElementById('clearBtn');
 const radioC = document.getElementById('radioC');
 const radioF = document.getElementById('radioF');
 
+// Functions
 const toCelsius = () => {
   unit = 'C';
   finalTemp = (tempInput.value - 32) * .5556;
@@ -23,7 +26,6 @@ const printToDom = (divId, textToPrint) => {
 };
 
 const domStringBuilder = (finalTemp, unit) => {
-  let domString = [];
   let color = '';
 
   if (unit !== 'F' && finalTemp >= 32) {
@@ -38,7 +40,7 @@ const domStringBuilder = (finalTemp, unit) => {
     color = 'green';
   }
 
-  domString += `<h2 class="${color}">${finalTemp} degrees ${unit}</h2>`;
+  let domString = `<h2 class="${color}">${finalTemp} degrees ${unit}</h2>`;
 
   printToDom('tempOutput', domString);
 }
@@ -64,10 +66,12 @@ const clear = () => {
   printToDom('tempOutput', '');
 }
 
+// Initialization Stack
 const init = () => {
   convertBtn.addEventListener('click', determineConverter);
-  document.addEventListener('keypress', enterKeydown)
+  document.addEventListener('keydown', enterKeydown)
   clearBtn.addEventListener('click', clear);
 }
 
+// Call Initializer
 init();
