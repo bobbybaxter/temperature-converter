@@ -49,3 +49,15 @@ input {
 p {
   margin: 0 10px 0 0;
 }
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+
+.blue {
+  color: blue;
+}
