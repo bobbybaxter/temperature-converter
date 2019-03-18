@@ -24,8 +24,8 @@ A template converter app.
 
 ## Screenshots
 ![image of temperature converter website with cold input](https://raw.githubusercontent.com/bobbybaxter/temperature-converter/master/img/temp-conv-screenshot1.png)
-![image of temperature converter website with normal input](https://raw.githubusercontent.com/bobbybaxter/temperature-converter/master/img/temp-conv-screenshot1.png)
-![image of temperature converter website with hot input](https://raw.githubusercontent.com/bobbybaxter/temperature-converter/master/img/temp-conv-screenshot1.png)
+![image of temperature converter website with normal input](https://raw.githubusercontent.com/bobbybaxter/temperature-converter/master/img/temp-conv-screenshot2.png)
+![image of temperature converter website with hot input](https://raw.githubusercontent.com/bobbybaxter/temperature-converter/master/img/temp-conv-screenshot3.png)
 
 ## Getting Started
 Clone the repo:
