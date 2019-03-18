@@ -2,17 +2,50 @@ body {
   background-color: white;
   display: flex;
   justify-content: center;
+  margin: 0;
 }
 
 .tempApp {
   display: flex;
-  height: 300px;
   width: 500px;
+  height: 300px;
   flex-direction: column;
   background-color: rgb(225, 225, 225);
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 #tempInput {
+  margin-left: 50%;
+  margin-right: 50%;
+  text-align: center;
+}
+
+#tempOutput {
+  height: 60px;
+  width: 300px;
+  border: 1px solid gray;
+  margin: 0 10px 0 10px;
+  text-align: center;
+}
+
+.radioBtns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 50%;
+  margin-right: 50%;
+}
+
+button {
+  margin: 0 10px 0 10px;
+}
+
+input {
+  margin: 0 10px 0 10px;
+}
+
+p {
+  margin: 0 10px 0 0;
 }
