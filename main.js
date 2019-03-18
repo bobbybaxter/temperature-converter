@@ -6,12 +6,14 @@ const radioF = document.getElementById('radioF');
 const toCelsius = () => {
   unit = 'C';
   finalTemp = (tempInput.value - 32) * .5556;
+  finalTemp.toFixed(0);
   domStringBuilder(finalTemp, unit);
 };
 
 const toFahrenheit = () => {
   unit = 'F';
   finalTemp = (tempInput.value * 1.8) + 32;
+  finalTemp.toFixed(0);
   domStringBuilder(finalTemp, unit);
 };
 
@@ -22,7 +24,21 @@ const printToDom = (divId, textToPrint) => {
 
 const domStringBuilder = (finalTemp, unit) => {
   let domString = [];
-  domString += `<h2>${finalTemp} degrees ${unit}</h2>`;
+  let color = '';
+
+  if (unit !== 'F' && finalTemp >= 32) {
+    color = 'red';
+  } else if (unit !== 'C' && finalTemp >= 90) {
+    color = 'red';
+  } else if (unit !== 'F' && finalTemp <= 0) {
+    color = 'blue';
+  } else if (unit !== 'C' && finalTemp <= 32) {
+    color = 'blue';
+  } else {
+    color = 'green';
+  }
+
+  domString += `<h2 class="${color}">${finalTemp} degrees ${unit}</h2>`;
 
   printToDom('tempOutput', domString);
 }
